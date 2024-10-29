@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+@layer base {
+  html {
+    @apply scrollbar scrollbar-thumb-neutral-400  scrollbar-track-transparent;
+  }
+
+  body {
+    @apply overflow-y-scroll bg-neutral-100 text-neutral-900 dark:bg-[#111113] dark:text-neutral-50;
+  }
+
+  input {
+    @apply accent-primary-600;
+  }
+
+  h1 {
+    @apply text-2xl lg:text-3xl font-bold mb-4;
+  }
+
+  h2 {
+    @apply text-lg lg:text-xl font-semibold mb-2;
+  }
+}
+
+@layer components {
+  .primary-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 text-white;
+  }
+
+  .btn {
+    @apply px-4 py-2 font-semibold rounded;
+  }
+}
