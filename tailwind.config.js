@@ -21,7 +21,21 @@ export default {
         xl: "1340px",
       },
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        shimmer: {
+          "100%": { left: "100%" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        shimmer: "shimmer 1.5s infinite",
+        fadeIn: "fadeIn 0.3s",
+      },
+    },
   },
   plugins: [require("tailwind-scrollbar")],
 };
