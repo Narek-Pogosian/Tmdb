@@ -10,7 +10,7 @@ body,
 
 @layer base {
   html {
-    @apply scrollbar scrollbar-thumb-neutral-400  scrollbar-track-transparent;
+    @apply scrollbar scrollbar-thumb-neutral-400 scrollbar-track-transparent;
   }
 
   body {
@@ -33,9 +33,5 @@ body,
 @layer components {
   .primary-gradient {
     @apply bg-gradient-to-r from-primary-600 to-secondary-600 text-white;
-  }
-
-  .btn {
-    @apply px-4 py-2 font-semibold rounded;
   }
 }
