@@ -2,6 +2,7 @@ import { api } from "@/lib/api";
 import { removeDuplicates } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
+import { useScrollTop } from "@/hooks/use-scroll-top";
 import RowList from "@/components/row-list";
 import PersonCard from "@/components/cards/person-card";
 import ErrorPage from "./components/error-page";
@@ -11,6 +12,7 @@ import DetailsInfo, {
 } from "./components/details-info";
 
 function MovieDetails() {
+  useScrollTop();
   const { id } = useParams();
 
   const {
