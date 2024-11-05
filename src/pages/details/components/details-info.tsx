@@ -1,7 +1,7 @@
 import { Genre, MovieCrew, Video } from "@/types";
 import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
-// import TrailerModal from "./trailer-modal";
+import TrailerModal from "./trailer-modal";
 
 type Props = {
   poster: string;
@@ -88,8 +88,7 @@ export default function DetailsInfo(props: Props) {
           </ul>
         </div>
 
-        {props.trailer && "TODO: Trailer modal"}
-        {/* {trailer && <TrailerModal trailer={trailer} />} */}
+        {props.trailer && <TrailerModal trailer={props.trailer} />}
       </div>
     </div>
   );
