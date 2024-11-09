@@ -14,7 +14,7 @@ body,
   }
 
   body {
-    @apply overflow-y-scroll bg-neutral-100 text-neutral-900 dark:bg-[#111113] dark:text-neutral-50;
+    @apply overflow-y-scroll bg-neutral-50 text-neutral-900 dark:bg-[#111113] dark:text-neutral-50;
   }
 
   input {

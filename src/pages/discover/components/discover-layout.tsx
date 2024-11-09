@@ -2,6 +2,8 @@ import { useShowDescriptiveGrid } from "@/hooks/use-show-descriptive-grid";
 import { Toggle } from "@/components/ui/toggle";
 import { Grid } from "lucide-react";
 import SortSelect from "./sort-select";
+import Filters from "./filters";
+import ScrollTopButton from "./scroll-top-button";
 
 type DiscoverLayoutProps = {
   children: React.ReactNode;
@@ -13,8 +15,10 @@ function DiscoverLayout({ children }: DiscoverLayoutProps) {
 
   return (
     <div className="flex flex-col gap-8 xl:flex-row">
-      <div className="w-full xl:w-fit xl:sticky top-[92px] h-fit">Filters</div>
-      <div className="w-full">
+      <div className="w-full xl:w-fit h-fit">
+        <Filters />
+      </div>
+      <div className="w-full relative">
         <div className="flex gap-4 mb-4">
           <SortSelect />
           <Toggle
@@ -27,6 +31,7 @@ function DiscoverLayout({ children }: DiscoverLayoutProps) {
           </Toggle>
         </div>
         {children}
+        <ScrollTopButton />
       </div>
     </div>
   );
