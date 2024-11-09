@@ -53,7 +53,7 @@ function TvContent() {
               overview={tv.overview}
               title={tv.name}
               vote={tv.vote_average}
-              voteCount={tv.vote_average}
+              voteCount={tv.vote_count}
               href={`/tv/${tv.id}`}
               backdrop={tv.backdrop_path}
             />

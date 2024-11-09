@@ -51,7 +51,7 @@ function MoviesContent() {
               overview={movie.overview}
               title={movie.title}
               vote={movie.vote_average}
-              voteCount={movie.vote_average}
+              voteCount={movie.vote_count}
               href={`/movie/${movie.id}`}
               backdrop={movie.backdrop_path}
             />

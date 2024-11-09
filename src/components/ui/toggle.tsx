@@ -6,13 +6,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const toggleVariants = cva(
-  "inline-flex items-center justify-center rounded text-sm font-medium ring-offset-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-neutral-200 dark:data-[state=on]:bg-neutral-800",
+  "inline-flex items-center justify-center rounded text-sm font-medium ring-offset-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-neutral-800 data-[state=on]:text-neutral-50 dark:data-[state=on]:bg-neutral-50 dark:data-[state=on]:text-neutral-900",
   {
     variants: {
       variant: {
         default: "bg-transparent",
         outline:
-          "border border-neutral-200 dark:border-neutral-800 bg-transparent",
+          "border border-neutral-200 bg-white dark:bg-white/5 dark:border-neutral-800",
       },
       size: {
         default: "size-10",
