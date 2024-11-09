@@ -1,5 +1,4 @@
-// import { useShowDescriptiveGrid } from "@/hooks/use-show-descriptive-grid-context";
-// import ScrollTopButton from "./scroll-top-button";
+import { useShowDescriptiveGrid } from "@/hooks/use-show-descriptive-grid";
 import { Toggle } from "@/components/ui/toggle";
 import { Grid } from "lucide-react";
 
@@ -8,8 +7,8 @@ type DiscoverLayoutProps = {
 };
 
 function DiscoverLayout({ children }: DiscoverLayoutProps) {
-  // const { toggleDescriptiveGrid, showDescriptiveGrid } =
-  //   useShowDescriptiveGrid();
+  const { toggleDescriptiveGrid, showDescriptiveGrid } =
+    useShowDescriptiveGrid();
 
   return (
     <div className="flex flex-col gap-8 xl:flex-row">
@@ -19,15 +18,14 @@ function DiscoverLayout({ children }: DiscoverLayoutProps) {
           <Toggle
             aria-label="Toggle grid"
             variant="outline"
-            // pressed={!showDescriptiveGrid}
-            // onPressedChange={toggleDescriptiveGrid}
+            pressed={!showDescriptiveGrid}
+            onPressedChange={toggleDescriptiveGrid}
           >
             <Grid />
           </Toggle>
         </div>
         {children}
       </div>
-      {/* {<ScrollTopButton />} */}
     </div>
   );
 }

@@ -61,7 +61,9 @@ export default function DescriptiveCard({
           </span>
           <span className="h-4">{voteCount} votes</span>
         </div>
-        <p className="text-neutral-400 line-clamp-5">{overview}</p>
+        <p className="dark:text-neutral-400 text-neutral-700 line-clamp-5">
+          {overview}
+        </p>
       </div>
     </article>
   );

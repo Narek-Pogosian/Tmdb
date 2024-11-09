@@ -1,4 +1,5 @@
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { ShowDescriptiveGridProvider } from "./context/show-descriptive-grid";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ThemeProvider } from "./components/theme-provider";
 import { BrowserRouter } from "react-router-dom";
@@ -20,13 +21,15 @@ const client = new QueryClient({
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider defaultTheme="dark" storageKey="tmdb-theme">
-      <QueryClientProvider client={client}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
-    </ThemeProvider>
+    <ShowDescriptiveGridProvider>
+      <ThemeProvider defaultTheme="dark" storageKey="tmdb-theme">
+        <QueryClientProvider client={client}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
+      </ThemeProvider>
+    </ShowDescriptiveGridProvider>
   </StrictMode>
 );
