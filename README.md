@@ -1,6 +1,6 @@
 # 🎬 Movie & TV Show Explorer
 
-<!-- ![Movies & TV Shows](https://github.com/user-attachments/assets/46c90b4c-0c87-43ea-82a3-03eb86f72010) -->
+![Movies & TV Shows](public/screenshot.webp)
 
 ## 🚀 About the Project
 
@@ -14,10 +14,6 @@ This project is a dynamic web application built with React that allows users to 
 - **Search Functionality**: Quickly find movies, TV shows, and actors using the search box.
 - **Detailed Information**: Get comprehensive details about your favorite movies, TV shows, and actors.
 
-## 👀 Live Demo
-
-Check out the live version of the project [here](https://tv-movies-seven.vercel.app/)!
-
 ## 🛠️ Tech Stack
 
 - **Vite**
@@ -26,3 +22,7 @@ Check out the live version of the project [here](https://tv-movies-seven.vercel.
 - **Tanstack React Query**
 - **Tailwind CSS**
 - **Headless UI**
+
+## API Key
+
+I am aware that the Tmdb API key is exposed since this a full client side application. This is just a pet project to create a nice UI and work with a 3rd part API.
