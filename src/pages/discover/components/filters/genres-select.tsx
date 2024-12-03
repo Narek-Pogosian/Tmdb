@@ -28,7 +28,9 @@ function GenresSelect({ value, onChange }: GenresSelectProps) {
         >
           Select genres
         </label>
-        <SelectButton id="genres-select">Genres</SelectButton>
+        <SelectButton id="genres-select" className="!bg-neutral-200/5">
+          Genres
+        </SelectButton>
         <SelectOptions>
           <div className="grid-cols-2 grid">
             {genres.map((genre) => (

@@ -12,10 +12,10 @@ const toggleVariants = cva(
       variant: {
         default: "bg-transparent",
         outline:
-          "border border-neutral-200 bg-white dark:bg-white/5 dark:border-neutral-800",
+          "border border-neutral-200 bg-white dark:bg-neutral-900 dark:border-neutral-800",
       },
       size: {
-        default: "size-10",
+        default: "size-9",
       },
     },
     defaultVariants: {

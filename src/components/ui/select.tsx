@@ -20,17 +20,19 @@ export function SelectWrapper({
   );
 }
 
-export function SelectButton({
-  children,
-  id,
-}: {
-  children: React.ReactNode;
+interface SelectButtonProps {
   id?: string;
-}) {
+  children: React.ReactNode;
+  className?: string;
+}
+export function SelectButton({ children, id, className }: SelectButtonProps) {
   return (
     <Listbox.Button
       id={id}
-      className="relative w-full border border-neutral-200 dark:border-neutral-800 cursor-pointer text-sm font-medium rounded bg-white dark:bg-white/5 py-2 pl-3 pr-10 text-left "
+      className={cn(
+        "relative w-full border h-9 border-neutral-200 dark:border-neutral-800 cursor-pointer text-sm font-medium rounded bg-white dark:bg-neutral-900 py-2 pl-3 pr-10 text-left",
+        className
+      )}
     >
       <span className="block truncate">{children}</span>
       <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -51,7 +53,7 @@ export function SelectOptions({ children }: { children: React.ReactNode }) {
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
     >
-      <Listbox.Options className="absolute z-10 mt-1 w-full bg-white border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900 shadow-lg rounded-lg p-1.5 text-base focus:outline-none sm:text-sm border">
+      <Listbox.Options className="absolute z-10 mt-1 w-full bg-white border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900 shadow-lg rounded-md p-1.5 space-y-1 text-base focus:outline-none sm:text-sm border">
         {children}
       </Listbox.Options>
     </Transition>
@@ -70,8 +72,8 @@ export function SelectOption({
     <Listbox.Option
       value={value}
       className={({ active }) =>
-        `cursor-pointer m-0.5 truncate font-medium rounded ${
-          active ? "dark:bg-white/10 bg-neutral-100" : ""
+        `cursor-pointer m-0.5 truncate font-medium rounded-md ${
+          active ? "dark:bg-neutral-800 bg-neutral-100" : ""
         }`
       }
     >

@@ -3,7 +3,7 @@ import { Genre } from "../types";
 export const tvGenres: Genre[] = [
   {
     id: 10759,
-    name: "Action & Adventure",
+    name: "Action",
   },
   {
     id: 16,
